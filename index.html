@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lista de Compras</h1>
+        <form id="js-shopping-list-form">
+            <label for="shopping-list-entry">Adicione um item</label>
+            <input type="text" name="shopping-list-entry" class="js-shopping-list-entry" placeholder="ex: cenoura">
+            <button type="submit">Adicione um item</button>
+        </form>
+        <ul class="shopping-list js-shopping-list">
+        </ul>
+    </div>
+    
+     
+    <div class="hidden">
+        <div id="list-item-template">
+            <li class="js-item-index-element">
+                <span class="shopping-item js-shopping-item"></span>
+                <div class="shopping-item-controls">
+                    <button class="shopping-item-toggle js-item-toggle">
+                        <span class="button-label">riscar</span>
+                    </button>
+                    <button class="shopping-item-delete js-item-delete">
+                        <span class="button-label">excluir</span>
+                    </button>
+                </div>
+            </li>
+        </div>
+    </div>
+    
+    
+</body>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+
+</html>
