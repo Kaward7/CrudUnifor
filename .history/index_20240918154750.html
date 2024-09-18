@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Compras</title>
+  
+  <!-- Estilos externos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Lista de Compras</h1>
+
+    <!-- Formulário para adicionar novos itens -->
+    <form id="js-shopping-list-form">
+      <label for="shopping-list-entry">Adicione um item</label>
+      <input type="text" name="shopping-list-entry" class="js-shopping-list-entry" placeholder="ex: cenoura">
+      <button type="submit">Adicione um item</button>
+    </form>
+
+    <!-- Lista de itens de compras -->
+    <ul class="shopping-list js-shopping-list"></ul>
+    
+    <!-- Elemento para exibir a mensagem "item X adicionado" -->
+    <p id="added-item-message" class="added-item-message"></p>
+
+    <!-- Template escondido -->
+    <div class="hidden">
+      <div id="list-item-template">
+        <li class="js-item-index-element">
+          <span class="shopping-item js-shopping-item"></span>
+          <div class="shopping-item-controls">
+            <button class="shopping-item-toggle js-item-toggle">
+              <span class="button-label">riscar</span>
+            </button>
+            <button class="shopping-item-delete js-item-delete">
+              <span class="button-label">excluir</span>
+            </button>
+          </div>
+        </li>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script para JQuery -->
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+
+  <!-- Script para lógica JavaScript -->
+  <script type="text/javascript" src="index.js"></script>
+
+  <script src="https://npmcdn.com/parse@3.1.1/dist/parse.min.js"></script>
+<script>
+  // Inicialize o Parse
+  Parse.initialize("gLuafKHCpVxu7mi68OMLoRHS451aFXoLsnu47cYl", "mF4l43LESHWh73UOuVrGEP07kzy9a0Jk4XUhXtvy");
+  Parse.serverURL = 'https://parseapi.back4app.com/';
+</script>
+
+
+</body>
+</html>

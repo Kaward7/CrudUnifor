@@ -49,3 +49,9 @@ button:hover {
 .shopping-item__checked {
   text-decoration: line-through;
 }
+
+.added-item-message {
+  color: green;
+  font-style: italic;
+  display: none; /* A mensagem ficará oculta até ser exibida */
+}
